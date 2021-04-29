@@ -1,13 +1,21 @@
 package com.tmg.entity.auth;
 
 
-import lombok.Data;
+import com.tmg.annotation.Original;
 
 import java.util.Arrays;
 import java.util.Date;
 
-@Data
-public class User{
+/**
+ * 该类为自动生成
+ *
+ * @author garmbrood
+ * @version 1.0
+ * @Company 天极传媒集团
+ * @Descripion 角色表(cms_role)
+ * @since 2009-04-30 14:21:43
+ */
+public class User {
 
     public static final int ZHUBIAN_PERMISSION=1;//主编权限
     public static final int ZONGJIAN_PERMISSION=2;//总监权限
@@ -17,6 +25,7 @@ public class User{
     /**
      * id
      */
+    @Original
     private int id;
 
     /**
@@ -33,7 +42,7 @@ public class User{
     /**
      * 性别
      */
-	
+	@Original
     private int sex;
 
 
@@ -77,12 +86,14 @@ public class User{
     /**
      * 部门ID
      */
+	@Original
     private int departmentId;
 
 
 	/**
 	 * 岗位ID
 	 */
+	@Original
 	private int positionId;
 
 	/**
@@ -105,6 +116,7 @@ public class User{
     /**
      * 多个id
      */
+	@Original
     private int[] ids;
 
     /**
@@ -120,11 +132,13 @@ public class User{
     /**
      * 结果
      */
+	@Original
     private int result;
 
 	/**
 	 * 状态
 	 */
+	@Original
 	private int state;
 
 	/**
@@ -135,12 +149,14 @@ public class User{
     /**
      * 多个角色ids
      */
+	@Original
     private int[] privilegeids;
 
 
     /**
      * 父id
      */
+	@Original
     private int fatherId;
 
     /**
@@ -152,6 +168,7 @@ public class User{
     /**
      * 角色ID
      */
+	@Original
     private int roleId;
 
     /**
@@ -162,6 +179,7 @@ public class User{
     /**
      * 系统级权限的id为-1
      */
+	@Original
     private int sitemapId;
 
 	/**
@@ -172,6 +190,7 @@ public class User{
     /**
      * 视图中的权限ID
      */
+	@Original
     private int privilegeId;
 
     /**
@@ -182,11 +201,13 @@ public class User{
     /**
      * 站点ID
      */
+	@Original
     private int siteId;
 
     /**
      * 频道ID
      */
+	@Original
     private int channelId;
 
 
@@ -218,6 +239,7 @@ public class User{
     private String channelname;
 
     private String jobduties;
+	@Original
     private int permission;//审稿的权限 1主编权限  2总监权限  3厂商稿权限  0无权限
 
     private String scoreboard;
