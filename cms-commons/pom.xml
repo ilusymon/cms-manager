@@ -39,6 +39,14 @@
             <artifactId>springfox-swagger-ui</artifactId>
         </dependency>
 
+        <!-- JWT -->
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt</artifactId>
+            <version>0.7.0</version>
+        </dependency>
+
+
         <!-- 服务调用feign -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>

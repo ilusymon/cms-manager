@@ -1,6 +1,8 @@
 package com.tmg.auth.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.tmg.entity.auth.User;
+import org.apache.ibatis.annotations.Mapper;
 
 /**
  * <p>
@@ -10,6 +12,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * @author laixm
  * @since 2021-04-28
  */
-public interface StudentMapper {
+@Mapper
+public interface UserMapper extends BaseMapper<User> {
 
 }

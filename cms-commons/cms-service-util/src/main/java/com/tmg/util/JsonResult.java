@@ -34,7 +34,7 @@ public class JsonResult<T> {
 	public static final int UNKNOWN_ERROR = 499;
 	
 	private int code;
-	private String msg;
+	private String message;
 	private T data;
 	
 	
@@ -45,22 +45,22 @@ public class JsonResult<T> {
 	public static JsonResult build(int code) {
 		return new JsonResult().code(code);
 	}
-	public static JsonResult build(int code, String msg) {
-		return new JsonResult<String>().code(code).msg(msg);
+	public static JsonResult build(int code, String message) {
+		return new JsonResult<String>().code(code).message(message);
 	}
 	public static <T> JsonResult<T> build(int code, T data) {
 		return new JsonResult<T>().code(code).data(data);
 	}
-	public static <T> JsonResult<T> build(int code, String msg, T data) {
-		return new JsonResult<T>().code(code).msg(msg).data(data);
+	public static <T> JsonResult<T> build(int code, String message, T data) {
+		return new JsonResult<T>().code(code).message(message).data(data);
 	}
 	
 	public JsonResult<T> code(int code) {
 		this.code = code;
 		return this;
 	}
-	public JsonResult<T> msg(String msg) {
-		this.msg = msg;
+	public JsonResult<T> message(String message) {
+		this.message = message;
 		return this;
 	}
 	public JsonResult<T> data(T data) {
@@ -72,8 +72,8 @@ public class JsonResult<T> {
 	public static JsonResult ok() {
 		return build(SUCCESS);
 	}
-	public static JsonResult ok(String msg) {
-		return build(SUCCESS, msg);
+	public static JsonResult ok(String message) {
+		return build(SUCCESS, message);
 	}
 	public static <T> JsonResult<T> ok(T data) {
 		return build(SUCCESS, data);
@@ -81,8 +81,8 @@ public class JsonResult<T> {
 	public static JsonResult err() {
 		return build(EXCEPTION);
 	}
-	public static JsonResult err(String msg) {
-		return build(EXCEPTION, msg);
+	public static JsonResult err(String message) {
+		return build(EXCEPTION, message);
 	}
 	
 	@Override

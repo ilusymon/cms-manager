@@ -1,6 +1,8 @@
 package com.tmg.entity.auth;
 
 
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableName;
 import com.tmg.annotation.Original;
 
 import java.util.Arrays;
@@ -15,6 +17,7 @@ import java.util.Date;
  * @Descripion 角色表(cms_role)
  * @since 2009-04-30 14:21:43
  */
+@TableName("cms_user")
 public class User {
 
     public static final int ZHUBIAN_PERMISSION=1;//主编权限
@@ -56,6 +59,7 @@ public class User {
     /**
      * 描述
      */
+    @TableField(exist = false)
     private String description;
 
 
@@ -99,6 +103,7 @@ public class User {
 	/**
 	 * 岗位ID
 	 */
+	@TableField(exist = false)
 	private String positionName;
 
 
@@ -116,23 +121,27 @@ public class User {
     /**
      * 多个id
      */
+    @TableField(exist = false)
 	@Original
     private int[] ids;
 
     /**
      * 类型名称
      */
+	@TableField(exist = false)
     private String typename;
 
 	/**
 	 * 把多个siteid拼为字符串
 	 */
+	@TableField(exist = false)
 	private String strSiteIds;
 
     /**
      * 结果
      */
 	@Original
+	@TableField(exist = false)
     private int result;
 
 	/**
@@ -144,12 +153,14 @@ public class User {
 	/**
 	 * 把多个分类值拼为字符串,从此cms_dictionary表中取数据.
 	 */
+	@TableField(exist = false)
 	private String strCategoryValues;
 
     /**
      * 多个角色ids
      */
 	@Original
+	@TableField(exist = false)
     private int[] privilegeids;
 
 
@@ -157,11 +168,13 @@ public class User {
      * 父id
      */
 	@Original
+	@TableField(exist = false)
     private int fatherId;
 
     /**
      * 子叶分枝
      */
+	@TableField(exist = false)
     private String leaf_branch;
 
 
@@ -169,11 +182,13 @@ public class User {
      * 角色ID
      */
 	@Original
+	@TableField(exist = false)
     private int roleId;
 
     /**
      * 多个pins
      */
+	@TableField(exist = false)
     private String[] pins;
 
     /**
@@ -185,17 +200,20 @@ public class User {
 	/**
 	 * 把多个部门值拼为字符串.
 	 */
+	@TableField(exist = false)
 	private String strDepartmentValues;
 
     /**
      * 视图中的权限ID
      */
 	@Original
+	@TableField(exist = false)
     private int privilegeId;
 
     /**
      * 权限查询项
      */
+	@TableField(exist = false)
     private String searchString;
 
     /**
@@ -214,28 +232,33 @@ public class User {
     /**
      * 主节点名称
      */
+	@TableField(exist = false)
     private String sitemapname;
 
     /**
      * 密码
      */
+    @TableField("password")
     private String passWord;
 
 
     /**
      * 新密码
      */
+	@TableField(exist = false)
     private String newPassword;
 
 
     /**
      * 站点名称
      */
+	@TableField(exist = false)
     private String sitename;
 
     /**
      * 频道名称
      */
+	@TableField(exist = false)
     private String channelname;
 
     private String jobduties;

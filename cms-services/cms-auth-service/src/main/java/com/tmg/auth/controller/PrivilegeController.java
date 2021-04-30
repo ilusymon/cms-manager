@@ -11,6 +11,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
+import java.util.HashMap;
 
 
 /**
@@ -28,27 +31,16 @@ public class PrivilegeController {
     @Resource
     private PrivilegeService privilegeService;
 
-    /*{
-    "code": 20000,
-    "data": {
-        "token": "admin-token"
-    }
-}*/
-    @RequestMapping("user/login")
-    public String login() {
-        return "{\n" +
-                "    \"code\": 20000,\n" +
-                "    \"data\": {\n" +
-                "        \"token\": \"admin-token\"\n" +
-                "    }\n" +
-                "}";
-    }
+
 
     @GetMapping("/list")
-    public JsonResult list() {
+    public JsonResult list(HttpServletRequest req) {
         Privilege privilege = new Privilege();
         privilege.setSearchString("");
         IPage<Privilege> privilegePage = privilegeService.query(privilege);
+        System.out.println("req.getHeader(\"vue_admin_template_token\") = " + req.getHeader("vue_admin_template_token"));
+        System.out.println("req.getHeader(\"X-Token\") = " + req.getHeader("X-Token"));
+
         return JsonResult.build(JsonResult.SUCCESS, privilegePage);
     }
 
