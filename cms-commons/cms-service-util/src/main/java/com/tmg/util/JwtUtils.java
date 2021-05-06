@@ -1,6 +1,6 @@
 package com.tmg.util;
 
-import com.tmg.entity.auth.User;
+import com.tmg.model.auth.User;
 import io.jsonwebtoken.Jws;
 import org.springframework.util.StringUtils;
 import io.jsonwebtoken.Claims;

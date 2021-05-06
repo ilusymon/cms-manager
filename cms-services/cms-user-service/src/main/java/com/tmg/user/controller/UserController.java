@@ -1,7 +1,7 @@
 package com.tmg.user.controller;
 
 import com.tmg.user.service.UserService;
-import com.tmg.entity.auth.User;
+import com.tmg.model.auth.User;
 import com.tmg.util.JsonResult;
 import com.tmg.util.JwtUtils;
 import jodd.util.StringUtil;

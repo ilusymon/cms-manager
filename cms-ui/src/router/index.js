@@ -49,9 +49,9 @@ export const constantRoutes = [
     redirect: '/dashboard',
     children: [{
       path: 'dashboard',
-      name: 'Dashboard',
+      name: '首页',
       component: () => import('@/views/dashboard/index'),
-      meta: { title: 'Dashboard', icon: 'dashboard' }
+      meta: { title: '首页', icon: 'dashboard' }
     }]
   },
 
@@ -73,6 +73,33 @@ export const constantRoutes = [
         name: 'Tree',
         component: () => import('@/views/tree/index'),
         meta: { title: 'Tree', icon: 'tree' }
+      }
+    ]
+  },
+  {
+    path: '/auth',
+    component: Layout,
+    redirect: '/auth/privilege',
+    name: '权限管理',
+    meta: { title: '权限管理', icon: 'el-icon-s-help' },
+    children: [
+      {
+        path: 'privilege',
+        name: '权限管理',
+        component: () => import('@/views/auth/privilege'),
+        meta: { title: '权限管理', icon: 'table' }
+      },
+      {
+        path: 'role',
+        name: '角色管理',
+        component: () => import('@/views/auth/role'),
+        meta: { title: '角色管理', icon: 'table' }
+      },
+      {
+        path: 'user',
+        name: '用户管理',
+        component: () => import('@/views/auth/user'),
+        meta: { title: '用户管理', icon: 'table' }
       }
     ]
   },

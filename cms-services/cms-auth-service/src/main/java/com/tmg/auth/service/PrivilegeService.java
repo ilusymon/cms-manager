@@ -1,8 +1,7 @@
 package com.tmg.auth.service;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
-import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.tmg.entity.auth.*;
+import com.tmg.model.auth.*;
 
 import java.util.Dictionary;
 import java.util.List;

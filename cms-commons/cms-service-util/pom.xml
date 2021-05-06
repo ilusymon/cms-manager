@@ -13,6 +13,12 @@
 
     <dependencies>
 
+        <dependency>
+            <groupId>com.tmg</groupId>
+            <artifactId>cms-model</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
         <!-- redis -->
         <dependency>
             <groupId>org.springframework.boot</groupId>

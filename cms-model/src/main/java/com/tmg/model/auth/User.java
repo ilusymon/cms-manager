@@ -1,9 +1,9 @@
-package com.tmg.entity.auth;
+package com.tmg.model.auth;
 
 
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
-import com.tmg.annotation.Original;
+import com.tmg.model.annotation.Original;
 
 import java.util.Arrays;
 import java.util.Date;

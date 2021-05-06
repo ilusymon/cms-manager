@@ -1,4 +1,4 @@
-package com.tmg.entity.auth;
+package com.tmg.model.auth;
 
 
 

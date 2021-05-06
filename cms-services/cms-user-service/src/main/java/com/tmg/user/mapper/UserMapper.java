@@ -1,7 +1,7 @@
 package com.tmg.user.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.tmg.entity.auth.User;
+import com.tmg.model.auth.User;
 import org.apache.ibatis.annotations.Mapper;
 
 /**

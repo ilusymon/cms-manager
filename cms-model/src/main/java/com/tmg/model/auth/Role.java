@@ -1,7 +1,7 @@
-package com.tmg.entity.auth;
+package com.tmg.model.auth;
 
 
-import com.tmg.annotation.Original;
+import com.tmg.model.annotation.Original;
 
 import java.util.Date;
 

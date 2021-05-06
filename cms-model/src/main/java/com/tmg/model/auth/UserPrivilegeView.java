@@ -1,13 +1,13 @@
-package com.tmg.entity.auth;
+package com.tmg.model.auth;
 
 
 /**
- * ¸ÃÀàÎª×Ô¶¯Éú³É
+ * ï¿½ï¿½ï¿½ï¿½Îªï¿½Ô¶ï¿½ï¿½ï¿½ï¿½ï¿½
  * @author garmbrood
  * @since  2009-05-05 11:34:48
  * @version 1.0
- * Company Ìì¼«´«Ã½¼¯ÍÅ
- * Descripion ÓÃ»§È¨ÏÞÊÓÍ¼ÐÅÏ¢(cms_user_privilege_view)
+ * Company ï¿½ì¼«ï¿½ï¿½Ã½ï¿½ï¿½ï¿½ï¿½
+ * Descripion ï¿½Ã»ï¿½È¨ï¿½ï¿½ï¿½ï¿½Í¼ï¿½ï¿½Ï¢(cms_user_privilege_view)
  */
 public class UserPrivilegeView {
 
@@ -15,50 +15,50 @@ public class UserPrivilegeView {
     public static final String LIMIT_CODE = "limit_manage";
 
         
-    /** µÇÂ¼Ãû */
+    /** ï¿½ï¿½Â¼ï¿½ï¿½ */
 	private String pin;
 
         
-    /** ½ÚµãºÅ */
+    /** ï¿½Úµï¿½ï¿½ */
 	private int sitemapId;
 
         
-    /** È¨ÏÞid */
+    /** È¨ï¿½ï¿½id */
 	private int privilegeId;
 
-    /** È¨ÏÞ±àÂë**/
+    /** È¨ï¿½Þ±ï¿½ï¿½ï¿½**/
     private String privilegeCode;
 
         
-    /** È¨ÏÞÃû³Æ */
+    /** È¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ */
 	private String privilegeName;
 
         
-    /** È¨ÏÞÀàÐÍ */
+    /** È¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ */
 	private int privilegeType;
 
         
-    /** È¨ÏÞ·ÖÀàid */
+    /** È¨ï¿½Þ·ï¿½ï¿½ï¿½id */
 	private int privilegeCategoryId;
 
-    /** Õ¾µãÃû³Æ */
+    /** Õ¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ */
 	private String sitemapname;
 
-    /** ½ÇÉ«id */
+    /** ï¿½ï¿½É«id */
 	private int roleId;
 	
-    /** ½ÇÉ«Ãû³Æ */
+    /** ï¿½ï¿½É«ï¿½ï¿½ï¿½ï¿½ */
 	private String rolename;
 	
-    /** Õ¾µãid */
+    /** Õ¾ï¿½ï¿½id */
 	private int siteId;
 	
-    /** ²¿ÃÅÃû³Æ */
+    /** ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ */
 	private String departmentname;
 
 
     /**
-     * ²ã´Î±àÂë
+     * ï¿½ï¿½Î±ï¿½ï¿½ï¿½
      */
     private long levelCode;
 

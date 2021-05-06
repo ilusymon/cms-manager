@@ -1,4 +1,4 @@
-package com.tmg.entity.auth;
+package com.tmg.model.auth;
 
 
 import com.baomidou.mybatisplus.annotation.TableField;

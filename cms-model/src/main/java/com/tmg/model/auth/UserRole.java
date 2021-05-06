@@ -1,15 +1,15 @@
-package com.tmg.entity.auth;
+package com.tmg.model.auth;
 
 import java.util.Date;
 import java.util.List;
 
 /**
- * ¸ÃÀàÎª×Ô¶¯Éú³É
+ * ï¿½ï¿½ï¿½ï¿½Îªï¿½Ô¶ï¿½ï¿½ï¿½ï¿½ï¿½
  *
  * @author garmbrood
  * @version 1.0
- * @Company Ìì¼«´«Ã½¼¯ÍÅ
- * @Descripion ÓÃ»§½ÇÉ«¹ØÁª±í(cms_user_role)
+ * @Company ï¿½ì¼«ï¿½ï¿½Ã½ï¿½ï¿½ï¿½ï¿½
+ * @Descripion ï¿½Ã»ï¿½ï¿½ï¿½É«ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½(cms_user_role)
  * @since 2009-04-30 14:21:43
  */
 public class UserRole {
@@ -19,19 +19,19 @@ public class UserRole {
      */
     private int id;
     /**
-     * ÓÃ»§pin
+     * ï¿½Ã»ï¿½pin
      */
     private String pin;
 
 
     /**
-     * ÏµÍ³¼¶È¨ÏÞµÄidÎª-1
+     * ÏµÍ³ï¿½ï¿½È¨ï¿½Þµï¿½idÎª-1
      */
     private int sitemapId;
 
 
     /**
-     * ½ÇÉ«ID
+     * ï¿½ï¿½É«ID
      */
     private int roleId;
 
@@ -39,85 +39,85 @@ public class UserRole {
     private Role role;
 
     /**
-     * ´´½¨ÈË
+     * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
      */
     private String creator;
 
 
     /**
-     * ´´½¨ÈÕÆÚ
+     * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
      */
     private Date createdTime;
 
 
     /**
-     * ¸üÐÂÈË
+     * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
      */
     private String updator;
 
 
     /**
-     * ¸üÐÂÈÕÆÚ
+     * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
      */
     private Date updatedTime;
 
     /**
-     * È¨ÏÞID
+     * È¨ï¿½ï¿½ID
      */
     private int privilegeId;
 
     
     /**
-     * ÓÃ»§Ãû³Æ
+     * ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½
      */
     private String name;
     
     /**
-     * Õ¾µãÃû³Æ
+     * Õ¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
      */
     private String sitemapname;
     
     
     /**
-     * ½ÇÉ«Ãû³Æ
+     * ï¿½ï¿½É«ï¿½ï¿½ï¿½ï¿½
      */
     private String rolename;
     
     /**
-     * È¨ÏÞÊý¾Ý
+     * È¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
      */
     private List<Privilege> privileges;
     
     
     /**
-     * ¶à¸öID
+     * ï¿½ï¿½ï¿½ID
      */
     private int[] Ids;
     
     /**
-     * ¶à¸ö½ÇÉ«ID
+     * ï¿½ï¿½ï¿½ï¿½ï¿½É«ID
      */
     private int[] roleIds;
     
     
     /**
-     * Õ¾µãÃû³Æ
+     * Õ¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
      */
     private String departmentname;
     
     /**
-     * ÀàÐÍ
+     * ï¿½ï¿½ï¿½ï¿½
      */
     private int type;
 
 
     /**
-     * Õ¾µãµ¼º½Ìõ.
+     * Õ¾ï¿½ãµ¼ï¿½ï¿½ï¿½ï¿½.
      */
     private String sitemaplink;
     
     /**
-     * ½Úµãids.
+     * ï¿½Úµï¿½ids.
      */
     private String sitemapids;
     
@@ -147,14 +147,14 @@ public class UserRole {
 	}
 
 	/**
-     * @return ÓÃ»§pin
+     * @return ï¿½Ã»ï¿½pin
      */
     public String getPin() {
         return this.pin;
     }
 
     /**
-     * @param _pin ÓÃ»§pin
+     * @param _pin ï¿½Ã»ï¿½pin
      */
     public void setPin(String _pin) {
         this.pin = _pin;
@@ -162,14 +162,14 @@ public class UserRole {
 
 
     /**
-     * @return ÏµÍ³¼¶È¨ÏÞµÄidÎª-1
+     * @return ÏµÍ³ï¿½ï¿½È¨ï¿½Þµï¿½idÎª-1
      */
     public int getSitemapId() {
         return this.sitemapId;
     }
 
     /**
-     * @param _sitemapId ÏµÍ³¼¶È¨ÏÞµÄidÎª-1
+     * @param _sitemapId ÏµÍ³ï¿½ï¿½È¨ï¿½Þµï¿½idÎª-1
      */
     public void setSitemapId(int _sitemapId) {
         this.sitemapId = _sitemapId;
@@ -177,14 +177,14 @@ public class UserRole {
 
 
     /**
-     * @return ½ÇÉ«ID
+     * @return ï¿½ï¿½É«ID
      */
     public int getRoleId() {
         return this.roleId;
     }
 
     /**
-     * @param _roleId ½ÇÉ«ID
+     * @param _roleId ï¿½ï¿½É«ID
      */
     public void setRoleId(int _roleId) {
         this.roleId = _roleId;
@@ -192,14 +192,14 @@ public class UserRole {
 
 
     /**
-     * @return ´´½¨ÈË
+     * @return ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
      */
     public String getCreator() {
         return this.creator;
     }
 
     /**
-     * @param _creator ´´½¨ÈË
+     * @param _creator ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
      */
     public void setCreator(String _creator) {
         this.creator = _creator;
@@ -207,14 +207,14 @@ public class UserRole {
 
 
     /**
-     * @return ´´½¨ÈÕÆÚ
+     * @return ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
      */
     public Date getCreatedTime() {
         return this.createdTime;
     }
 
     /**
-     * @param _createdTime ´´½¨ÈÕÆÚ
+     * @param _createdTime ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
      */
     public void setCreatedTime(Date _createdTime) {
         this.createdTime = _createdTime;
@@ -222,14 +222,14 @@ public class UserRole {
 
 
     /**
-     * @return ¸üÐÂÈË
+     * @return ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
      */
     public String getUpdator() {
         return this.updator;
     }
 
     /**
-     * @param _updator ¸üÐÂÈË
+     * @param _updator ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
      */
     public void setUpdator(String _updator) {
         this.updator = _updator;
@@ -237,14 +237,14 @@ public class UserRole {
 
 
     /**
-     * @return ¸üÐÂÈÕÆÚ
+     * @return ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
      */
     public Date getUpdatedTime() {
         return this.updatedTime;
     }
 
     /**
-     * @param _updatedTime ¸üÐÂÈÕÆÚ
+     * @param _updatedTime ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
      */
     public void setUpdatedTime(Date _updatedTime) {
         this.updatedTime = _updatedTime;

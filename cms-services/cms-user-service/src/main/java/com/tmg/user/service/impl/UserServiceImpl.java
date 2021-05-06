@@ -1,7 +1,7 @@
 package com.tmg.user.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.tmg.entity.auth.User;
+import com.tmg.model.auth.User;
 import com.tmg.user.mapper.UserMapper;
 import com.tmg.user.service.UserService;
 import com.tmg.util.Md5Utils;

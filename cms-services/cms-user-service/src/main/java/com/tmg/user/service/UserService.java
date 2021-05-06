@@ -1,6 +1,6 @@
 package com.tmg.user.service;
 
-import com.tmg.entity.auth.User;
+import com.tmg.model.auth.User;
 
 /**
  * @author Administrator

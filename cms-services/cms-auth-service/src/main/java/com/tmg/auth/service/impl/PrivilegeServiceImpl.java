@@ -5,7 +5,7 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.tmg.auth.mapper.PrivilegeMapper;
 import com.tmg.auth.service.PrivilegeService;
-import com.tmg.entity.auth.*;
+import com.tmg.model.auth.*;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
