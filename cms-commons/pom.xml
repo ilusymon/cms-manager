@@ -6,6 +6,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>cms-service-util</module>
+        <module>cms-common-util</module>
     </modules>
     <parent>
         <groupId>com.tmg</groupId>
@@ -53,17 +54,17 @@
             <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>
 
-        <!-- 服务注册-->
-        <!--<dependency>-->
-        <!--<groupId>org.springframework.cloud</groupId>-->
-        <!--<artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>-->
-        <!--</dependency>-->
+         <!--服务注册-->
+        <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+        </dependency>
 
-        <!-- 服务配置-->
-        <!--<dependency>-->
-        <!--<groupId>org.springframework.cloud</groupId>-->
-        <!--<artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>-->
-        <!--</dependency>-->
+         <!--服务配置-->
+        <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+        </dependency>
 
         <!-- 流量控制-->
         <!--<dependency>-->

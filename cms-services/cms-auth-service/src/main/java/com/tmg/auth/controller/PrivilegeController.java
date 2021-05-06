@@ -23,7 +23,6 @@ import java.util.HashMap;
  * @description TODO
  * @date 2021/4/28 9:58
  */
-@CrossOrigin
 @RestController
 @RequestMapping("/privilege")
 public class PrivilegeController {

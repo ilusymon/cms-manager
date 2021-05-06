@@ -1,14 +1,10 @@
-package com.tmg.auth.controller;
+package com.tmg.user.controller;
 
-import com.tmg.auth.mapper.UserMapper;
-import com.tmg.auth.service.UserService;
+import com.tmg.user.service.UserService;
 import com.tmg.entity.auth.User;
-import com.tmg.util.CookieUtil;
 import com.tmg.util.JsonResult;
 import com.tmg.util.JwtUtils;
 import jodd.util.StringUtil;
-import org.springframework.util.StringUtils;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -20,11 +16,10 @@ import java.util.HashMap;
 /**
  * @author Administrator
  * @version 1.0
- * @className UserController
+ * @className com.tmg.user.controller.UserController
  * @description TODO
  * @date 2021/4/30 14:35
  */
-@CrossOrigin
 @RestController
 @RequestMapping("/user")
 public class UserController {

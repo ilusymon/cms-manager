@@ -1,21 +1,18 @@
-package com.tmg.auth.service.impl;
+package com.tmg.user.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.fasterxml.jackson.core.JsonEncoding;
-import com.tmg.auth.mapper.UserMapper;
-import com.tmg.auth.service.UserService;
 import com.tmg.entity.auth.User;
+import com.tmg.user.mapper.UserMapper;
+import com.tmg.user.service.UserService;
 import com.tmg.util.Md5Utils;
 import org.springframework.stereotype.Service;
-import sun.security.provider.MD5;
-import sun.security.rsa.RSASignature;
 
 import javax.annotation.Resource;
 
 /**
  * @author Administrator
  * @version 1.0
- * @className UserServiceImpl
+ * @className com.tmg.user.service.impl.UserServiceImpl
  * @description TODO
  * @date 2021/4/30 14:38
  */

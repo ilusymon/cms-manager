@@ -1,4 +1,4 @@
-package com.tmg.auth;
+package com.tmg.gateway;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -6,14 +6,19 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.ComponentScan;
 
+/**
+ * @author Administrator
+ * @version 1.0
+ * @className CmsGatewayApplication
+ * @description TODO
+ * @date 2021/5/6 13:49
+ */
 @SpringBootApplication
-@ComponentScan(basePackages = "com.tmg")
+@EnableFeignClients("com.tmg")
+@ComponentScan("com.tmg")
 @EnableDiscoveryClient
-@EnableFeignClients(basePackages = "com.tmg")
-public class CmsAuthServiceApplication {
-
+public class CmsGatewayApplication {
     public static void main(String[] args) {
-        SpringApplication.run(CmsAuthServiceApplication.class, args);
+        SpringApplication.run(CmsGatewayApplication.class, args);
     }
-
 }

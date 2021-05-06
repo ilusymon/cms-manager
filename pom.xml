@@ -6,6 +6,7 @@
     <modules>
         <module>cms-commons</module>
         <module>cms-services</module>
+        <module>cms-gateway</module>
     </modules>
 
     <parent>

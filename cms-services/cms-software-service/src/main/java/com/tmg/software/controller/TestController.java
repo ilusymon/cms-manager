@@ -16,7 +16,7 @@ import java.util.HashMap;
  * @date 2021/4/30 16:34
  */
 @RestController
-@CrossOrigin
+@RequestMapping("/software")
 public class TestController {
 
     @RequestMapping("/test")

@@ -1,4 +1,4 @@
-package com.tmg.auth.mapper;
+package com.tmg.user.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.tmg.entity.auth.User;
