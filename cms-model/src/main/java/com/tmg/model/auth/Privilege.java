@@ -3,6 +3,8 @@ package com.tmg.model.auth;
 
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.fasterxml.jackson.annotation.JsonFormat;
+import lombok.Data;
 
 import java.util.Date;
 import java.util.List;
@@ -16,6 +18,7 @@ import java.util.List;
  * @Descripion 用户权限表 ， 如 编辑 ，删除，修改文章等
  * @since 2009-04-30 14:21:43
  */
+@Data
 @TableName("cms_privilege")
 public class Privilege {
 
@@ -57,6 +60,7 @@ public class Privilege {
     /**
      * 创建日期
      */
+    @JsonFormat(timezone = "GMT+8", pattern = "yyyy-MM-dd")
     private Date createdTime;
 
 
@@ -69,6 +73,7 @@ public class Privilege {
     /**
      * 更新日期
      */
+    @JsonFormat(timezone = "GMT+8", pattern = "yyyy-MM-dd")
     private Date updatedTime;
 
     

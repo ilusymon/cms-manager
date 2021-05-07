@@ -161,4 +161,6 @@ public interface PrivilegeService {
     public List<UserPrivilegeView> getUserSitemapIdView(String pin);
 
     IPage<Privilege> query(Privilege privilege);
+
+    IPage<Privilege> getPrivilegePage(Privilege privilege, Integer currentPage, Integer pageSize);
 }

@@ -8,6 +8,7 @@
         <module>cms-services</module>
         <module>cms-gateway</module>
         <module>cms-model</module>
+        <module>cms-clients</module>
     </modules>
 
     <parent>

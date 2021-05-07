@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tmg.auth.mapper.DictionaryMapper">
+
+    <sql id="dictionaryField">
+        ID id, TYPE type, NAME name, VALUE value, DESCRIPTION description, CREATOR creator, CREATED_TIME createdTime, UPDATOR updator, UPDATED_TIME updatedTime
+        </sql>
+
+    <select id="queryForTypeId" resultType="com.tmg.model.auth.Dictionary">
+        select
+        <include refid="dictionaryField"/>
+        from cms_dictionary
+        where type=(select value from cms_dictionary_type where id=#{typeId})
+        order by value
+    </select>
+</mapper>

@@ -32,9 +32,9 @@
           <template>
             <el-select v-model="siteId" clearable placeholder="请选择站点">
               <el-option
-                v-for="item in siteIds"
+                v-for="item in siteMaps"
                 :key="item.value"
-                :label="item.label"
+                :label="item.name"
                 :value="item.value">
               </el-option>
             </el-select>
@@ -43,7 +43,7 @@
       </el-col>
       <el-col :span="4">
         <div class="grid-content bg-purple">
-          <el-button type="primary" icon="el-icon-search">搜索</el-button>
+          <el-button type="primary" @click="reSearch()" icon="el-icon-search">搜索</el-button>
         </div>
       </el-col>
     </el-row>
@@ -134,7 +134,7 @@
         @size-change="handleSizeChange"
         @current-change="handleCurrentChange"
         :current-page="currentPage"
-        :page-sizes="[20,50,100]"
+        :page-sizes="[12,20,50,100]"
         :page-size="pageSize"
         layout="total, sizes, prev, pager, next, jumper"
         :total="totalPage">
@@ -151,8 +151,8 @@
       return {
         tableData: [],
         multipleSelection: [],
-        currentPage: 5,
-        pageSize: 20,
+        currentPage: 1,
+        pageSize: 12,
         totalPage: 100,
         searchName: '',
 
@@ -167,18 +167,7 @@
           label: '节点级权限'
         }],
         type: '',
-        siteIds:[
-          {
-            value: 1,
-            label: '系统级权限'
-          }, {
-            value: 2,
-            label: '站点级权限'
-          }, {
-            value: 3,
-            label: '节点级权限'
-          }
-        ],
+        siteMaps:[],
         siteId:''
       }
     },
@@ -188,10 +177,12 @@
 
     methods: {
       getPrivileges() {
-        getPrivileges().then(resp => {
+        getPrivileges(this.searchName, this.type, this.siteId, this.currentPage, this.pageSize).then(resp => {
           console.log(resp);
-          this.tableData = resp.data.records;
-        })
+          this.tableData = resp.data.res.records;
+          this.siteMaps = resp.data.siteMaps;
+          this.totalPage = resp.data.res.total;
+        });
       },
       toggleSelection(rows) {
         if (rows) {
@@ -217,10 +208,18 @@
         });
       },
       handleSizeChange(val) {
+        this.pageSize = val;
+        this.getPrivileges();
         console.log(`每页 ${val} 条`);
       },
       handleCurrentChange(val) {
+        this.currentPage = val;
+        this.getPrivileges();
         console.log(`当前页: ${val}`);
+      },
+      reSearch() {
+        this.currentPage = 1;
+        this.getPrivileges();
       }
     }
   }

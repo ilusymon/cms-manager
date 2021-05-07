@@ -7,6 +7,7 @@ import com.tmg.auth.mapper.PrivilegeMapper;
 import com.tmg.auth.service.PrivilegeService;
 import com.tmg.model.auth.*;
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
 
 import javax.annotation.Resource;
 import java.util.Dictionary;
@@ -136,5 +137,14 @@ public class PrivilegeServiceImpl implements PrivilegeService {
         page.setCurrent(1).setSize(100).setTotal(500);
         IPage<Privilege> privilegeIPage = privilegeMapper.selectPage(page, new QueryWrapper<>());
         return privilegeIPage;
+    }
+
+    @Override
+    public IPage<Privilege> getPrivilegePage(Privilege privilege, Integer currentPage, Integer pageSize) {
+        Page<Privilege> page = new Page<>();
+        page.setCurrent(currentPage).setSize(pageSize);
+        page.setRecords(privilegeMapper.selectPrivileges(privilege, (currentPage - 1) * pageSize, pageSize));
+        page.setTotal(privilegeMapper.selectPrivilegesCount(privilege));
+        return page;
     }
 }

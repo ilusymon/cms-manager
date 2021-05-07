@@ -1,6 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.tmg.model.auth.Privilege">
+<mapper namespace="com.tmg.auth.mapper.PrivilegeMapper">
 
+    <sql id="privilegeField">
+        ID id, `TYPE` `type`, CATEGORY_ID categoryId, `NAME` `name`, DESCRIPTION description, CREATOR creator, CREATED_TIME createdTime, UPDATOR updator, UPDATED_TIME updatedTime,
+        ( select name from cms_dictionary t1 where type=6 and t1.value=t.type)typename,
+		( select name from cms_dictionary t1 where type=7 and t1.value=t.category_id)categoryname
+    </sql>
+
+    <sql id="privilegeWhere">
+        <where>
+            <if test="privilege.id!=0">
+                and ID=#{privilege.id}
+            </if>
+            <if test="privilege.type!=0">
+                and TYPE=#{privilege.type}
+            </if>
+            <if test="privilege.categoryId!=0">
+                and CATEGORY_ID=#{privilege.categoryId}
+            </if>
+            <if test="privilege.name!=null and privilege.name!=''">
+                and upper(NAME) like upper(concat('%' ,#{privilege.name} , '%' ))
+            </if>
+            <if test="privilege.description!=null and privilege.description!=''">
+                and DESCRIPTION=#{privilege.description}
+            </if>
+            <if test="privilege.creator!=null and privilege.creator!=''">
+                and CREATOR=#{privilege.creator}
+            </if>
+            <if test="privilege.createdTime!=null and privilege.createdTime!=''">
+                and CREATED_TIME=#{privilege.createdTime}
+            </if>
+            <if test="privilege.updator!=null and privilege.updator!=''">
+                and UPDATOR=#{privilege.updator}
+            </if>
+            <if test="privilege.updatedTime!=null and privilege.updatedTime!=''">
+                and UPDATED_TIME=#{privilege.updatedTime}
+            </if>
+            <if test="privilege.strCategoryValues!=null and privilege.strCategoryValues!=''">and CATEGORY_ID in (#{privilege.strCategoryValues})</if>
+            <if test="privilege.strRoleValues!=null and privilege.strRoleValues!=''">and ID in (select t.privilege_id from cms_role_privilege t where role_id
+                in
+                (#{privilege.strRoleValues}))
+            </if>
+            <if test="privilege.id!=0">
+                and ID in (select t.privilege_id from cms_role_privilege t where role_id=#{privilege.roleId})
+            </if>
+            <if test="privilege.istype!=0">
+                and TYPE not in (1,2)
+            </if>
+        </where>
+    </sql>
+
+    <select id="selectPrivileges" resultType="com.tmg.model.auth.Privilege"
+            parameterType="com.tmg.model.auth.Privilege">
+        select
+        <include refid="privilegeField"/>
+        from CMS_PRIVILEGE t
+        <include refid="privilegeWhere"/>
+        limit #{currentPage} ,#{pageSize}
+    </select>
+
+    <select id="selectPrivilegesCount" resultType="java.lang.Long">
+        select count(*) from CMS_PRIVILEGE t
+        <include refid="privilegeWhere"/>
+    </select>
 
 </mapper>
